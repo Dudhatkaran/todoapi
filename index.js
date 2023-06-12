@@ -18,8 +18,8 @@ app.listen(1111, () => {
     console.log("Sever Start..............");
 });
 
-app.use('/', (req, res) => {
-    return res.send("backend start")
-})
+// app.use('/', (req, res) => {
+//     return res.send("backend start")
+// })
 
 app.use('/api', require('./API/Crudapi'));
