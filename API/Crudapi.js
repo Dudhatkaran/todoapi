@@ -55,7 +55,8 @@ router.get('/get-edit-todo/:id', async (req, res) => {
 
 router.put('/update-todo/:id', async (req, res) => {
     try {
-        const updatedata = await schema.findByIdAndUpdate(req.params.id);
+        const updatedata = await schema.findByIdAndUpdate(req.params.id, req.body);
+
         return res.send(updatedata);
     } catch (error) {
         console.log('error::: ', error);
